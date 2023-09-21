@@ -13,6 +13,8 @@ public class Main {
     public static final String SET_PHONE      = "SP";
     public static final String SET_EMAIL      = "SE";
     public static final String LIST_CONTACTS  = "LC";
+    public static final String LOOKUP_PHONE   = "GN";
+    public static final String CHECK_SAME_PHONE = "EP";
     public static final String QUIT           = "Q";
 
     //Constantes que definem as mensagens para o utilizador
@@ -53,6 +55,12 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case LOOKUP_PHONE:
+                    lookupByPhone(in, cBook);
+                    break;
+                case CHECK_SAME_PHONE:
+                    checkSamePhone(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -62,6 +70,12 @@ public class Main {
         System.out.println(QUIT_MSG);
         System.out.println();
         in.close();
+    }
+
+    private static void checkSamePhone(ContactBook cBook) {
+    }
+
+    private static void lookupByPhone(Scanner in, ContactBook cBook) {
     }
 
     private static String getCommand(Scanner in) {
