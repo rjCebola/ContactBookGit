@@ -28,7 +28,8 @@ public class Main {
     public static final String COMMAND_ERROR = "Unknown command.";
     public static final String NO_PHONE_NUMBER = "Phone number does not exist.";
     public static final String SAME_PHONE_NUMBERS = "There are contacts that share phone numbers.";
-    public static final String NO_SAME_PHONE_NUMBERS = "All contacts have different phone numbers.";
+
+    public static final String ALL_DIFFERENT_PHONE_NUMBERS = "All contacts have different phone numbers.";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -80,7 +81,7 @@ public class Main {
             System.out.println(SAME_PHONE_NUMBERS);
         }
         else {
-            System.out.println(NO_SAME_PHONE_NUMBERS);
+            System.out.println(ALL_DIFFERENT_PHONE_NUMBERS);
         }
 
     }
