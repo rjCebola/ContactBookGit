@@ -93,4 +93,27 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public String getNameOfThisNumber(int phone) {
+        String name = null;
+        for(int i = 0; i < counter; i++) {
+            if(contacts[i].getPhone() == phone) {
+                name = contacts[i].getName();
+                break;
+            }
+        }
+        return name;
+    }
+
+    public boolean areThereSamePhoneNumber() {
+        boolean thereAre = false;
+        for(int i = 0; i < counter - 1 && !thereAre; i++) {
+            for(int j = i + 1; j < counter && !thereAre; j++) {
+                if(contacts[i].getPhone() == contacts[j].getPhone()) {
+                    thereAre = true;
+                }
+            }
+        }
+        return thereAre;
+    }
+
 }
